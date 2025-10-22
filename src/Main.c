@@ -32,11 +32,11 @@ void Setup(AlxWindow* w){
     edited = TextBox_New(Input_New(10,INPUT_MAXLENGTH),(Rect){ 0.0f,0.0f,1000.0f,OFFSET_Y - PADDING_Y },AlxFont_PATHS_HIGH,16,32,BLACK);
     TextBox_SetSyntax(&edited, "/home/codeleaded/System/SyntaxFiles/VBLike_Syntax.alxon");
 
-    //excel = Excel_Load("./bin","./data/SpreadSheet0.vblss");
-    excel = Excel_New("./bin",10,10);
-    Excel_Print(&excel);
-    Excel_Print_T(&excel);
-    Excel_Print_O(&excel);
+    excel = Excel_Load("./bin","./data/SpreadSheet0.vblss");
+    // excel = Excel_New("./bin",10,10);
+    // Excel_Print(&excel);
+    // Excel_Print_T(&excel);
+    // Excel_Print_O(&excel);
 }
 
 void Update(AlxWindow* w){
@@ -124,6 +124,11 @@ void Update(AlxWindow* w){
 }
 
 void Delete(AlxWindow* w){
+    Excel_Print(&excel);
+    Excel_Print_T(&excel);
+    Excel_Print_O(&excel);
+    Excel_Save(&excel,"./data/SpreadSheet0.vblss");
+    
     Excel_Free(&excel);
 }
 
