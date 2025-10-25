@@ -29,7 +29,7 @@ float scrolly;
 void Setup(AlxWindow* w){
 	ResizeAlxFont(25,25);
 
-    edited = TextBox_New(Input_New(10,INPUT_MAXLENGTH),(Rect){ 0.0f,0.0f,1000.0f,OFFSET_Y - PADDING_Y },AlxFont_PATHS_BLOCKY,32,32,BLACK);
+    edited = TextBox_New(Input_New(10,INPUT_MAXLENGTH),(Rect){ 0.0f,0.0f,1000.0f,OFFSET_Y - PADDING_Y },AlxFont_PATHS_HIGH,16,32,BLACK);
     TextBox_SetSyntax(&edited, "/home/codeleaded/System/SyntaxFiles/VBLike_Syntax.alxon");
 
     excel = Excel_Load("./bin","./data/SpreadSheet0.vblss");
