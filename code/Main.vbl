@@ -1,9 +1,11 @@
+from vbcell import *
+
 function add(a,b)
     return a + b
 end
 
 function main()
-    
+
     $(0,0) = 1
     $(1,0) = 2
 
