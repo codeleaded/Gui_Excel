@@ -43,6 +43,17 @@ void Update(AlxWindow* w){
     char isEnabled = edited.In.Enabled;
     TextBox_Update(&edited,w->Strokes,GetMouse());
 	
+    /*
+    if(Stroke(ALX_KEY_ENTER).PRESSED){
+        Interpreter_Script(&excel.vbl.ev,"./code/Main.vbl");
+        Variable ret = VBLike_Function(&excel.vbl,"main",(Variable[]){ 
+            VARIABLE_END
+        });
+        VBLike_PrintVariable(&excel.vbl,&ret);
+        Variable_Free(&ret);
+    }
+    */
+
     if(!isEnabled){
         cellx = -1;
         celly = -1;
